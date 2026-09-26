@@ -7,11 +7,12 @@
   <title>Request Appointment</title>
   <meta name="theme-color" content="#1877F2">
   <meta property="og:title" content="Official Appointment Portal">
-  <meta property="og:description" content="Request AppointmentWelcome to my official online and offline appointment portal. Connect with our ministry today.">
-  <meta property="og:image" content="https://PASTE_YOUR_PREVIEW_IMAGE_URL_HERE.jpg">
+  <meta property="og:description" content="Request Appointment. Welcome to my official online and offline appointment portal. Connect with Rev. Don Victor, PhD.">
+  <meta property="og:image" content="https://i.ibb.co/gLZJ8SQW/Screenshot-20260923-232221.png">
   <meta property="og:url" content="https://PASTE_YOUR_APP_URL_HERE.com">
   <meta property="og:type" content="website">
-  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" href="https://i.ibb.co/4wnXPXwf/file-0000000086e082108a256bf60a03ce5e.png">
+<link rel="manifest" href="./manifest.json">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -229,14 +230,37 @@
             });
           </script>
           <!-- END LIVE STATUS WIDGET -->
+          <div id="dvRichBioText" style="max-height: 8em; overflow: hidden; text-align: left; color: var(--dv-text-secondary); font-size: 1rem; line-height: 1.5; margin-bottom: 8px;">
+            <h4 style="color: var(--dv-accent-dark); font-size: 1.2rem; font-weight: 800; margin: 0 0 10px 0;">About Rev. Don Victor, PhD</h4>
+            <p style="margin: 0 0 14px 0;">Rev. Dr. Don Victor is an ordained Reverend Minister of Jesus Christ, a prophet, multifaceted personality, scholar, interdisciplinary researcher, trainer, web developer, and software engineer whose work integrates faith, scholarship, technology, and global impact. His academic journey spans foundational WAEC qualification to a PhD in Education, giving him a broad foundation for addressing complex spiritual, educational, technological, and organizational challenges.</p>
+            <div style="background-color: rgba(24, 119, 242, 0.08); padding: 16px; border-left: 4px solid var(--dv-accent); margin-bottom: 14px; border-radius: 0 8px 8px 0; color: var(--dv-text);">
+              <strong style="display: block; margin-bottom: 4px; color: var(--dv-accent-dark);">Core Focus:</strong>
+              Driven by a vision to reach six million souls, Dr. Don Victor has established and developed diverse online and offline ministries, educational initiatives, and technology-driven solutions. His expertise in software engineering enables him to research, design, and deploy practical digital tools that streamline operations, automate processes, support online engagement, deliver education, and advance institutional growth. 
+            </div>
+            <p style="margin: 0;">As an innovator, he translates scholarly and ministry frameworks into scalable systems and platforms for spiritual growth, Christian education, leadership development, and ministry operations. Through his global initiatives, he facilitates collaboration across diverse networks and builds bridges between faith, education, research, and modern technology to bring truth, healing, and transformation to nations and sphere of society.</p>
+          </div>
           
-          <p id="dvBioText" class="dv-hero-bio">Dr. Don Victor is an ordained Reverend Minister of Jesus Christ, a Prophet, multifaceted personality, scholar, interdisciplinary researcher, trainer, web developer, and software engineer whose work integrates faith, scholarship, technology, and global impact. His academic journey spans foundational WAEC qualification to a PhD in Education, giving him a broad foundation for addressing complex spiritual, educational, technological, and organizational challenges.</p><p>Driven by a vision to reach six million souls, Dr. Don Victor has established and developed diverse online and offline ministries, educational initiatives, and technology-driven solutions. His expertise in software engineering enables him to research, design, and deploy practical digital tools that streamline operations, automate processes, support online engagement, deliver education, and advance institutional growth.</p><p>As an innovator, he translates scholarly and ministry frameworks into scalable systems and platforms for spiritual growth, Christian education, leadership development, and ministry operations.</p><p>Through his global initiatives, he facilitates collaboration across diverse networks and builds bridges between faith, education, research, and modern technology to bring truth, healing, and transformation to nations and sphere of society.</p>
-          <button id="dvBioToggle" type="button" class="dv-bio-toggle">Show more</button>
+         <button id="dvRichBioToggle" type="button" class="dv-bio-toggle" style="margin-bottom: 22px;">Show more</button>          
+          <script>
+            document.addEventListener("DOMContentLoaded", function() {
+              var btn = document.getElementById("dvRichBioToggle");
+              var txt = document.getElementById("dvRichBioText");
+              if (btn && txt) {
+                btn.addEventListener("click", function() {
+                  var isExpanded = txt.style.maxHeight === "none";
+                  txt.style.maxHeight = isExpanded ? "8em" : "none";
+                  btn.textContent = isExpanded ? "Show more" : "Show less";
+                });
+              }
+            });
+          </script>
+          
+          <!-- END UPGRADED RICH BIO BLOCK -->
           <h3 class="dv-hero-headline">Welcome to access online &amp; offline appointment portal.</h3>
           <div class="dv-action-group">
             <a href="https://www.donvictoracademy.net/" class="dv-pill-btn dv-pill-solid"><span style="text-decoration: underline;">View Portfolio</span></a>
             <a href="https://wa.me/2348086590253" target="_blank" class="dv-pill-btn dv-pill-green">
-             <svg viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35m-5.42 7.4h0a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 012.89 6.99c0 5.45-4.44 9.89-9.89 9.89m8.41-18.3A11.82 11.82 0 0012.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.69 1.45h0c6.55 0 11.89-5.34 11.89-11.89a11.82 11.82 0 00-3.48-8.41z"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
               <span style="text-decoration: underline;">Chat On WhatsApp</span>
             </a>
           </div>
