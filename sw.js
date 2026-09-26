@@ -1,5 +1,5 @@
 
-const CACHE_NAME = 'request-appointment-cache-v1.2';
+const CACHE_NAME = 'request-appointment-cache-v1.3';
 const CORE_ASSETS = [
   './',
   './index.html',
