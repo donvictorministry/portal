@@ -1,0 +1,601 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Request Appointment</title>
+  <meta name="theme-color" content="#1877F2">
+  <meta property="og:title" content="Official Appointment Portal">
+  <meta property="og:description" content="Request AppointmentWelcome to my official online and offline appointment portal. Connect with our ministry today.">
+  <meta property="og:image" content="https://PASTE_YOUR_PREVIEW_IMAGE_URL_HERE.jpg">
+  <meta property="og:url" content="https://PASTE_YOUR_APP_URL_HERE.com">
+  <meta property="og:type" content="website">
+  <link rel="manifest" href="./manifest.json">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<script>
+(function () {
+  var style = document.createElement('style');
+
+  style.innerHTML =
+    '#dvNativeSplash{' +
+      'position:fixed;inset:0;width:100dvw;height:100dvh;z-index:999999;' +
+      'display:flex;align-items:center;justify-content:center;overflow:hidden;' +
+      'box-sizing:border-box;color:#fff;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;' +
+      'background:linear-gradient(145deg,#1877F2 0%,#1264cf 45%,#0a3d91 100%);' +
+      'transition:opacity .6s ease}' +
+
+    '#dvNativeSplash:before{' +
+      'content:"";position:absolute;width:520px;height:520px;border-radius:50%;' +
+      'background:radial-gradient(circle,rgba(255,255,255,.13),transparent 68%);' +
+      'top:-180px;right:-190px;animation:dvGlow 6s ease-in-out infinite alternate}' +
+
+    '#dvNativeSplash:after{' +
+      'content:"";position:absolute;width:430px;height:430px;border-radius:50%;' +
+      'background:radial-gradient(circle,rgba(255,255,255,.08),transparent 68%);' +
+      'bottom:-230px;left:-180px}' +
+
+    '.dv-google-loader{' +
+      'position:absolute;top:20px;left:0;width:100dvw;height:20px;min-height:20px;' +
+      'overflow:hidden;background:rgba(255,255,255,.15);z-index:10;' +
+      'box-shadow:0 2px 14px rgba(0,0,0,.18)}' +
+
+    '.dv-google-loader:after{' +
+      'content:"";position:absolute;top:0;left:0;width:32%;height:20px;min-height:20px;' +
+      'background:#fff;box-shadow:0 0 16px rgba(255,255,255,.8);' +
+      'animation:dvLoad 1.6s ease-in-out infinite}' +
+
+    '.dv-splash-card{' +
+      'position:relative;z-index:3;width:calc(100% - 32px);max-width:410px;' +
+      'padding:34px 24px 28px;box-sizing:border-box;text-align:center;' +
+      'border:1px solid rgba(255,255,255,.20);border-radius:30px;' +
+      'background:linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.045));' +
+      'box-shadow:0 25px 70px rgba(0,20,70,.35),inset 0 1px rgba(255,255,255,.18);' +
+      'backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);' +
+      'animation:dvCard .8s ease both}' +
+
+    '.dv-splash-logo-wrap{' +
+      'position:relative;width:188px;height:188px;margin:0 auto 25px;' +
+      'display:flex;align-items:center;justify-content:center}' +
+
+    '.dv-splash-logo-wrap:before{' +
+      'content:"";position:absolute;inset:0;border-radius:50%;' +
+      'border:2px solid rgba(255,255,255,.35);' +
+      'box-shadow:0 0 28px rgba(255,255,255,.15);' +
+      'animation:dvRing 3s ease-in-out infinite}' +
+
+    '.dv-splash-logo-wrap:after{' +
+      'content:"";position:absolute;inset:9px;border-radius:50%;' +
+      'border:1px solid rgba(255,255,255,.25)}' +
+
+    '.dv-splash-img{' +
+      'position:relative;z-index:2;width:160px;height:160px;border-radius:50%;' +
+      'object-fit:cover;border:4px solid #fff;box-sizing:border-box;' +
+      'box-shadow:0 14px 35px rgba(0,0,0,.35),0 0 24px rgba(255,255,255,.20);' +
+      'animation:dvLogo .9s cubic-bezier(.2,.8,.2,1) both}' +
+
+    '.dv-splash-text-wrap{' +
+      'border-left:3px solid #fff;padding:3px 0 3px 17px;' +
+      'text-align:left;animation:dvText .9s .15s ease both}' +
+
+    '.dv-splash-text{' +
+      'margin:0 0 10px;color:#fff;font-size:1.4rem;line-height:1.2;' +
+      'font-weight:850;letter-spacing:.8px;text-transform:uppercase;' +
+      'text-shadow:0 2px 12px rgba(0,0,0,.25);word-break:break-word}' +
+
+    '.dv-splash-subtext{' +
+      'color:#fff;font-size:.94rem;line-height:1.55;word-break:break-word}' +
+
+    '.dv-splash-status{' +
+      'display:flex;align-items:center;justify-content:center;gap:8px;margin-top:23px;' +
+      'font-size:.68rem;letter-spacing:1.5px;text-transform:uppercase;color:#fff}' +
+
+    '.dv-status-dot{' +
+      'width:7px;height:7px;border-radius:50%;background:#fff;' +
+      'box-shadow:0 0 10px rgba(255,255,255,.8);animation:dvPulse 1.4s infinite}' +
+
+    '@keyframes dvLoad{' +
+      '0%{transform:translateX(-120%)}50%{width:45%}100%{transform:translateX(340%)}}' +
+
+    '@keyframes dvGlow{' +
+      'from{transform:scale(.9);opacity:.65}to{transform:scale(1.1);opacity:1}}' +
+
+    '@keyframes dvCard{' +
+      'from{opacity:0;transform:translateY(18px) scale(.97)}to{opacity:1;transform:none}}' +
+
+    '@keyframes dvLogo{' +
+      'from{opacity:0;transform:scale(.72) rotate(-8deg)}to{opacity:1;transform:none}}' +
+
+    '@keyframes dvRing{' +
+      '0%,100%{transform:scale(.96);opacity:.55}50%{transform:scale(1.04);opacity:1}}' +
+
+    '@keyframes dvText{' +
+      'from{opacity:0;transform:translateX(-12px)}to{opacity:1;transform:none}}' +
+
+    '@keyframes dvPulse{' +
+      '50%{opacity:.4;transform:scale(.7)}}' +
+
+    '@media(max-height:650px){' +
+      '.dv-splash-card{padding:22px 20px}' +
+      '.dv-splash-logo-wrap{width:170px;height:170px;margin-bottom:17px}' +
+      '.dv-splash-img{width:160px;height:160px}' +
+      '.dv-splash-subtext{font-size:.86rem;line-height:1.45}' +
+      '.dv-splash-status{margin-top:15px}' +
+    '}';
+  document.head.appendChild(style);
+  var splash = document.createElement('div');
+  splash.id = 'dvNativeSplash';
+
+  splash.innerHTML =
+    '<div class="dv-google-loader"></div>' +
+    '<div class="dv-splash-card">' +
+      '<div class="dv-splash-logo-wrap">' +
+        '<img src="https://i.ibb.co/4wnXPXwf/file-0000000086e082108a256bf60a03ce5e.png" alt="App Logo" class="dv-splash-img">' +
+      '</div>' +
+      '<div class="dv-splash-text-wrap">' +
+        '<div class="dv-splash-text">PASTE_YOUR_BRAND_NAME_HERE</div>' +
+        '<div class="dv-splash-subtext">PASTE_YOUR_DESCRIPTION_HERE. This is a placeholder for your 250-character welcoming text, mission statement, or introductory message.</div>' +
+      '</div>' +
+      '<div class="dv-splash-status">' +
+        '<span class="dv-status-dot"></span>' +
+        '<span>Preparing your experience</span>' +
+      '</div>' +
+    '</div>';
+
+  document.documentElement.appendChild(splash);
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      splash.style.opacity = '0';
+      setTimeout(function () {
+        if (splash.parentNode) splash.parentNode.removeChild(splash);
+        if (style.parentNode) style.parentNode.removeChild(style);
+      }, 600);
+    }, 8000);
+  });
+})();
+</script>
+
+<div id="dvInstallPrompt" class="dv-hidden">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1877F2" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+  <div>Install App to Home Screen</div>
+  <button id="dvBtnInstallApp">Install</button>
+  <div id="dvBtnDismissInstall">&times;</div>
+</div>
+
+<div class="dv-app-shell">
+  <header class="dv-header1">
+    <button id="dvBtnLeftSidebar" type="button" class="dv-header-btn" aria-label="Menu">
+      <span class="dv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></span>
+    </button>
+    <div class="dv-brand">Appointment Portal</div>
+    <span id="dvNetDot" class="dv-net-dot" title="Connection status"></span>
+    <button id="dvBtnRightSidebar" type="button" class="dv-header-btn dv-hidden" aria-label="Options">
+      <span class="dv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1.5"></circle><circle cx="12" cy="12" r="1.5"></circle><circle cx="12" cy="19" r="1.5"></circle></svg></span>
+    </button>
+  </header>
+
+  <div id="dvOfflineBanner" class="dv-offline-banner dv-hidden">
+    <span class="dv-offline-spinner"></span> Searching for network...
+  </div>
+
+  <!-- HOME -->
+  <div id="tab-Home" class="dv-tab-content dv-active">
+    <div class="dv-home-wrap">
+      <div class="dv-hero-card">
+        <div class="dv-hero-banner">
+          <div class="dv-profile-ring"><img id="dvProfilePhoto" src="PASTE_YOUR_PHOTO_URL_HERE.jpg" alt="Profile"></div>
+          <h2 class="dv-hero-name">Rev. Chris Johnson, PhD</h2>
+          <p class="dv-hero-role">Prophet of God &nbsp;\u00b7&nbsp; Trainer &nbsp;\u00b7&nbsp; Researcher &nbsp;\u00b7&nbsp; Full Stack Developer</p>
+        </div>
+        <div class="dv-hero-body">
+          <!-- LIVE STATUS WIDGET (CSS, HTML, & JS Master Switch) -->
+          <style>
+            .dv-mog-status-wrap { display: flex; flex-direction: column; align-items: center; margin-bottom: 22px; width: 100%; }
+            .dv-status-pill { display: inline-flex; align-items: center; gap: 8px; padding: 8px 18px; border-radius: 30px; font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px; }
+            .dv-status-live { background: rgba(37, 211, 102, 0.15); color: #1a7f3c; border: 1.5px solid rgba(37, 211, 102, 0.4); animation: dv-pulse-status 2s infinite; }
+            .dv-status-away { background: #f0f2f5; color: var(--dv-text-secondary); border: 1.5px solid var(--dv-border); }
+            [data-dv-theme="dark"] .dv-status-away { background: #2c2c2c; }
+            .dv-status-dot { width: 10px; height: 10px; border-radius: 50%; }
+            .dv-status-live .dv-status-dot { background: #25D366; }
+            .dv-status-away .dv-status-dot { background: var(--dv-text-secondary); }
+            .dv-status-offline-text { color: var(--dv-danger); font-size: 1rem; font-weight: 800; font-style: italic; text-align: center; line-height: 1.45; margin-bottom: 16px; width: 100%; display: block; }
+            .dv-status-form-btn { width: 100%; min-height: 56px; border-radius: 20px; background: rgba(24, 119, 242, 0.08); color: var(--dv-accent); font-size: 1.05rem; font-weight: 800; border: none; display: flex; align-items: center; justify-content: center; gap: 10px; cursor: pointer; box-sizing: border-box; }
+            .dv-status-form-btn:active { background: rgba(24, 119, 242, 0.16); }
+            @keyframes dv-pulse-status { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); } 70% { box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
+          </style>
+
+          <div id="dvMogStatusWrap" class="dv-mog-status-wrap"></div>
+          
+          <script>
+            // ADMIN SWITCH: Change true to false when you leave the app
+            var MOG_IS_LIVE = true; 
+            
+            document.addEventListener("DOMContentLoaded", function () {
+              var statusWrap = document.getElementById("dvMogStatusWrap");
+              if (statusWrap) {
+                if (MOG_IS_LIVE) {
+                  statusWrap.innerHTML = '<div class="dv-status-pill dv-status-live"><span class="dv-status-dot"></span>Live in the app now</div>';
+                } else {
+                  statusWrap.innerHTML = 
+                    '<div class="dv-status-pill dv-status-away"><span class="dv-status-dot"></span>Out of the app</div>' +
+                    '<div class="dv-status-offline-text">Fill out the form and send it. We will receive and respond to every submission.</div>' +
+                    '<button type="button" class="dv-status-form-btn" onclick="dvSwitchTab(\'Form\')">' +
+                      '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>' +
+                      'Tap here to open Form' +
+                    '</button>';
+                }
+              }
+            });
+          </script>
+          <!-- END LIVE STATUS WIDGET -->
+          
+          <p id="dvBioText" class="dv-hero-bio">Brief bio description goes here to introduce yourself to your audience.</p>
+          <button id="dvBioToggle" type="button" class="dv-bio-toggle">Show more</button>
+          <h3 class="dv-hero-headline">Welcome to access online &amp; offline appointment portal.</h3>
+          <div class="dv-action-group">
+            <a href="#" class="dv-pill-btn dv-pill-solid"><span style="text-decoration: underline;">View Portfolio</span></a>
+            <a href="#" target="_blank" class="dv-pill-btn dv-pill-green">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+              <span style="text-decoration: underline;">Chat On WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INFO (ticker) -->
+  <div id="tab-Info" class="dv-tab-content">
+    <div class="dv-info-wrap">
+      <div id="dvPlaceholderWrap" class="dv-hidden"></div>
+      <div style="display:flex; justify-content:flex-end; padding:10px 12px 0;">
+      <button id="dvBtnRefreshInfo" type="button" class="dv-refresh-btn" style="position:static; display:none;" aria-label="Refresh"><span class="dv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg></span></button>
+      </div>
+    </div>
+  <!-- FULL WIDTH EDGE-TO-EDGE ANNOUNCEMENT CANVAS -->
+    <div style="width: 100%; margin: -14px 0 0 0; padding: 0 16px 24px; background: transparent; box-sizing: border-box;">
+      
+      <!-- BOLD TITLE WITH SVG ICON -->
+      <h2 style="display: flex; align-items: center; justify-content: center; gap: 10px; margin: 0 0 24px 0; font-weight: 900; font-size: 1.5rem; color: var(--dv-text);">
+        <span class="dv-icon" style="color: var(--dv-accent); width: 28px; height: 28px;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+        </span>
+        Announcement
+      </h2>
+
+     <!-- LEFT ALIGNED BOLD SUBTITLE -->
+      <h3 style="text-align: left; font-weight: 700; margin-bottom: 12px; font-size: 1.15rem; color: var(--dv-accent-dark);">
+        Global Research Insights & Ministry Updates
+      </h3>
+
+      <!-- TEASER TEXT (First ~400 Characters) -->
+      <div id="dvAnnounceTeaser">
+        <p style="line-height: 1.6; margin-bottom: 16px; color: var(--dv-text-secondary); font-size: 1rem;">
+          Welcome to the official publication canvas. This space is designed for deep, edge-to-edge reading. We are sharing groundbreaking insights regarding our global outreach, community impact, and spiritual research. The world is changing rapidly, and maintaining a clear line of communication with our international congregation is more critical than ever before...
+        </p>
+        <button onclick="document.getElementById('dvAnnounceFull').style.display='block'; document.getElementById('dvAnnounceTeaser').style.display='none';" style="background: none; border: none; color: var(--dv-accent); font-weight: bold; padding: 0; font-size: 1rem; text-decoration: underline; cursor: pointer;">
+          Show more
+        </button>
+      </div>
+
+      <!-- FULL HIDDEN TEXT (Expands when clicked) -->
+      <div id="dvAnnounceFull" style="display: none;">
+        <p style="line-height: 1.6; margin-bottom: 16px; color: var(--dv-text-secondary); font-size: 1rem;">
+          Welcome to the official publication canvas. This space is designed for deep, edge-to-edge reading. We are sharing groundbreaking insights regarding our global outreach, community impact, and spiritual research. The world is changing rapidly, and maintaining a clear line of communication with our international congregation is more critical than ever before.
+        </p>
+
+        <p style="line-height: 1.6; margin-bottom: 24px; color: var(--dv-text-secondary); font-size: 1rem;">
+          Through dedicated online counseling and ministry, we have seen unprecedented growth in digital engagement. This research paper explores the metrics behind our success and outlines the roadmap for the upcoming year.
+        </p>
+
+        <!-- HIGHLIGHTED PARAGRAPH -->
+        <div style="background-color: rgba(24, 119, 242, 0.08); padding: 16px; border-left: 4px solid var(--dv-accent); margin-bottom: 24px; border-radius: 0 8px 8px 0; color: var(--dv-text);">
+          <strong style="display: block; margin-bottom: 8px; color: var(--dv-accent-dark);">Key Highlight:</strong>
+          This specific paragraph is styled to command attention. Use this box to drop your most critical insights, statistics, or primary announcements that you want readers to remember worldwide.
+        </div>
+
+        <p style="line-height: 1.6; margin-bottom: 16px; color: var(--dv-text-secondary); font-size: 1rem;">
+          Thank you for your continued support and for being a part of this vision. More updates will be posted here regularly.
+        </p>
+
+        <button onclick="document.getElementById('dvAnnounceFull').style.display='none'; document.getElementById('dvAnnounceTeaser').style.display='block';" style="background: none; border: none; color: var(--dv-accent); font-weight: bold; padding: 0; font-size: 1rem; text-decoration: underline; cursor: pointer;">
+          Show less
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FORM (Terms gate -> actual form) -->
+  <div id="tab-Form" class="dv-tab-content">
+    <div id="dvTermsView" class="dv-terms-wrap">
+      <h2>Terms &amp; Privacy Policy</h2>
+      <p>Please review our <a href="#" target="_blank">Terms of Use</a> and <a href="#" target="_blank">Privacy Policy</a> before proceeding.</p>
+      <div class="dv-terms-check-row">
+        <input type="checkbox" id="dvTermsCheck">
+        <label for="dvTermsCheck">I acknowledge and agree to the Terms of Use and Privacy Policy</label>
+      </div>
+      <button id="dvBtnAcceptTerms" class="dv-appt-btn" disabled style="opacity:0.5;cursor:not-allowed;">Continue to Form</button>
+    </div>
+
+    <div id="dvActualForm" class="dv-appt-form-page dv-hidden">
+      <div class="dv-modal-topbar">
+        <h2>Request Appointment</h2>
+        <button id="dvBtnRefreshForm" type="button" class="dv-refresh-btn" style="display:none;" aria-label="Refresh"><span class="dv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg></span></button>
+      </div>
+
+      <div id="dvApptFormWrapper" class="dv-appt-form">
+        <div class="dv-appt-field">
+          <label class="dv-appt-label">Full Name</label>
+          <input id="dvApptName" class="dv-appt-input" type="text" placeholder="Enter your name">
+        </div>
+        <div class="dv-appt-field">
+          <label class="dv-appt-label">Gender</label>
+          <select id="dvApptGender" class="dv-appt-select">
+            <option value="">Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+        </div>
+        <div class="dv-appt-field">
+          <label class="dv-appt-label">Appointment Purpose</label>
+          <select id="dvApptPurpose" class="dv-appt-select">
+            <option value="">Select Purpose</option>
+            <option value="Special Prayer">Special Prayer</option>
+            <option value="One on One Counseling">One on One Counseling</option>
+            <option value="Invitation to Lecture">Invitation to Lecture</option>
+            <option value="Invitation to preach in your church">Invitation to preach in your church</option>
+            <option value="Personal Mentorship">Personal Mentorship</option>
+            <option value="To support the ministry">To support the ministry</option>
+            <option value="To Join online community">To Join online community</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="dv-appt-field">
+          <label class="dv-appt-label">Message</label>
+          <textarea id="dvApptMessage" class="dv-appt-textarea" placeholder="Briefly describe your request..." maxlength="600"></textarea>
+          <div id="dvApptCharCount" class="dv-char-count">0 / 600</div>
+        </div>
+
+        <button id="dvBtnSubmitAppt" class="dv-appt-btn" disabled>Submit Request</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- INBOX -->
+  <div id="tab-Inbox" class="dv-tab-content">
+    <div class="dv-modal-topbar">
+   <button id="dvBtnRefreshInbox" type="button" class="dv-refresh-btn" style="display:none;" aria-label="Refresh"><span class="dv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg></span></button>
+    </div>
+    <div class="dv-inbox-wrap">
+      <button id="dvBtnCheckInbox" class="dv-inbox-btn" style="margin-bottom:18px;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="24" height="24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        Check Messages
+      </button>
+      <div id="dvInboxSpinner" class="dv-overlay-spinner dv-hidden" style="position:static;margin:0 auto 16px;width:36px;height:36px;"></div>
+      <div id="dvInboxMessageText" style="font-size:1.05rem;font-weight:700;margin-bottom:18px;line-height:1.5;"></div>      
+      <!-- LOCALIZED SCRIPT: SILENT UNDERGROUND POLLING OVERRIDE -->
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          var dvIsManualInboxCheck = false;
+          var checkBtn = document.getElementById("dvBtnCheckInbox");
+          
+          // 1. Listen for manual clicks on the Check Messages button
+          if (checkBtn) {
+            checkBtn.addEventListener("click", function() { dvIsManualInboxCheck = true; });
+          }   
+          // 2. Safely intercept the sync function without permanently altering the original logic
+          var dvOriginalSync = window.dvSyncInboxContent;
+          window.dvSyncInboxContent = function() {
+            var promise = dvOriginalSync(); 
+            var spin = document.getElementById("dvInboxSpinner");
+            var txt = document.getElementById("dvInboxMessageText");
+            
+            if (!dvIsManualInboxCheck) {
+              // It is underground polling -> Apply inline display:none to silence it
+              if (spin) spin.style.display = "none";
+              if (txt) txt.style.display = "none";
+            } else {
+              // It is a manual click -> Clear inline styles so the original spinner displays normally
+              if (spin) spin.style.display = "";
+              if (txt) txt.style.display = "";
+            }
+            
+            dvIsManualInboxCheck = false; // Reset for the next cycle
+            return promise;
+          };
+        });
+      </script>
+      <h2 style="color:var(--dv-accent-dark);font-size:1.5rem;font-weight:800;margin-bottom:14px;">Inbox</h2>
+      <div style="text-align:left;background:var(--dv-bg);border-radius:14px;padding:16px 18px;margin-bottom:22px;">
+        <div id="dvInboxInstText" style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;">
+          <ol style="margin:0;padding-left:20px;color:var(--dv-text-secondary);font-size:0.95rem;line-height:1.7;">
+            <li>After you submit a request in the Form tab, this Inbox becomes your private line to the Man of God.</li>
+            <li>Tap <strong>Check Messages</strong> above any time to look for a reply.</li>
+            <li>A red <strong>+1</strong> badge and a pulsing envelope on the bottom nav mean a new reply has arrived.</li>
+            <li>Opening a reply clears the badge \u2014 it's marked as read.</li>
+            <li>If the Man of God opens live chat for you, this screen becomes a real conversation thread instead of a single reply.</li>
+          </ol>
+        </div>
+        <button id="dvInboxInstToggle" type="button" class="dv-bio-toggle" style="margin:10px 0 0;font-size:0.85rem;padding:0;">Show more</button>
+      </div>
+      <div id="dvReplyContent" class="dv-reply-card dv-hidden"></div>
+      <div id="dvChatWrap" class="dv-chat-wrap dv-hidden">
+        
+        <style>
+          .dv-chat-live-alert { display: flex; align-items: center; justify-content: center; gap: 8px; color: var(--dv-danger); font-size: 1.05rem; font-weight: 800; white-space: nowrap; margin-bottom: 16px; animation: dv-pulse-alert 1.2s infinite alternate ease-in-out; }
+          @keyframes dv-pulse-alert { 0% { opacity: 1; } 100% { opacity: 0.35; } }
+        </style>
+        <div id="dvChatNoteText" class="dv-chat-live-alert">
+          Live Chat is Open 
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"></path><path d="M1.42 9a16 16 0 0 1 21.16 0"></path><path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path><line x1="12" y1="20" x2="12.01" y2="20"></line></svg>
+        </div>
+        
+        <div id="dvChatMessages" class="dv-chat-messages"></div>
+        <div class="dv-chat-composer">
+        <textarea id="dvChatInput" class="dv-chat-input" rows="1" placeholder="Type a message..." maxlength="1500"></textarea>
+          <button id="dvChatSend" class="dv-chat-send" aria-label="Send"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></button>
+        </div>
+      </div>
+      <div id="dvChatPausedNote" class="dv-chat-paused dv-hidden">The Man of God has paused live chat for now. Your conversation is saved and will continue right where you left off once it reopens.</div>
+    </div>
+  </div>
+  <!-- MISSION -->
+  <div id="tab-Mission" class="dv-tab-content">
+    <!-- FULL WIDTH EDGE-TO-EDGE MISSION CANVAS -->
+    <div style="width: 100%; padding: 16px 16px 34px; background: transparent; box-sizing: border-box;">
+      
+      <!-- BOLD TITLE WITH COMPASS SVG ICON -->
+      <h2 style="display: flex; align-items: center; justify-content: center; gap: 10px; margin: 0 0 24px 0; font-weight: 900; font-size: 1.5rem; color: var(--dv-text);">
+        <span class="dv-icon" style="color: var(--dv-accent); width: 28px; height: 28px;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+        </span>
+        Our Mission
+      </h2>
+
+      <!-- LEFT ALIGNED BOLD SUBTITLE -->
+      <h3 style="text-align: left; font-weight: 700; margin-bottom: 12px; font-size: 1.15rem; color: var(--dv-accent-dark);">
+        Empowering Lives & Spreading Faith
+      </h3>
+
+      <!-- EXPANDABLE TEXT CONTAINER (Preserves JS functionality) -->
+      <div id="dvMissionText" style="max-height: 8.4em; overflow: hidden; color: var(--dv-text-secondary); font-size: 1rem; line-height: 1.6;">
+        
+        <p style="margin: 0 0 16px;">
+          To empower, uplift, and spread faith through our dedicated ministry. We are committed to serving the community, providing authentic mentorship, and sharing a powerful message of hope and transformation globally.
+        </p>
+
+        <!-- HIGHLIGHTED PARAGRAPH -->
+        <div style="background-color: rgba(24, 119, 242, 0.08); padding: 16px; border-left: 4px solid var(--dv-accent); margin-bottom: 24px; border-radius: 0 8px 8px 0; color: var(--dv-text);">
+          <strong style="display: block; margin-bottom: 8px; color: var(--dv-accent-dark);">Our Core Calling:</strong>
+          We do not just preach; we aim to transform lives through dedicated prayer, counseling, and hands-on community outreach. This is a movement of genuine spiritual growth.
+        </div>
+
+        <h4 style="color: var(--dv-accent-dark); font-size: 1.05rem; font-weight: 800; margin: 0 0 12px;">What We Do</h4>
+        <ul style="margin: 0 0 16px; padding-left: 20px;">
+          <li style="margin-bottom: 6px;">Prayer, counseling, and personal mentorship</li>
+          <li style="margin-bottom: 6px;">Community outreach and online teaching</li>
+          <li style="margin-bottom: 6px;">Support for local churches and leaders</li>
+        </ul>
+        
+        <p style="margin: 0;">
+          Thank you for being part of this vision. Your support and prayers fuel this ongoing mission to reach the unreached.
+        </p>
+      </div>
+      
+      <!-- SHOW MORE TOGGLE -->
+      <button id="dvMissionToggle" type="button" class="dv-bio-toggle" style="margin: 10px 0 32px; color: var(--dv-accent); font-weight: bold; font-size: 1rem; padding: 0; text-decoration: underline; background: none; border: none; cursor: pointer;">Show more</button>
+
+      <!-- SOCIAL CONTACT ROW -->
+      <h3 style="text-align: center; font-weight: 700; margin-bottom: 20px; font-size: 1.25rem; color: var(--dv-accent-dark);">Support &amp; Contact Us</h3>
+      <div class="dv-contact-row" style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+        <a href="mailto:#" class="dv-contact-circle dv-btn-email"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a>
+        <a href="#" class="dv-contact-circle dv-btn-fb"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+        <a href="#" class="dv-contact-circle dv-btn-wa"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></a>
+        <a href="tel:#" class="dv-contact-circle dv-btn-phone"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom nav — 5 items, Reordered -->
+  <div class="dv-bottom-nav">
+    <div class="dv-nav-item dv-active" data-tab="Home" onclick="dvSwitchTab('Home')"><svg class="dv-nav-icon" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>Home</div>
+    <div class="dv-nav-item" data-tab="Form" onclick="dvSwitchTab('Form')"><svg class="dv-nav-icon" viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>Form</div>
+    <div class="dv-nav-item" id="dvNavInboxBtn" data-tab="Inbox" onclick="dvSwitchTab('Inbox')">
+      <div class="dv-nav-icon-wrap"><svg class="dv-nav-icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg><span id="dvNavInboxBadge" class="dv-nav-badge dv-hidden">+1</span></div>Inbox
+    </div>
+    <div class="dv-nav-item" data-tab="Mission" onclick="dvSwitchTab('Mission')"><svg class="dv-nav-icon" viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>Mission</div>
+    <div class="dv-nav-item" data-tab="Info" onclick="dvSwitchTab('Info')"><svg class="dv-nav-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>Info</div>
+  </div>
+</div>
+
+<!-- Left sidebar: public, ungated -->
+<div id="dvLeftBackdrop" class="dv-sidebar-backdrop dv-hidden"></div>
+<div id="dvLeftSidebar" class="dv-sidebar dv-hidden">
+  <div class="dv-sidebar-header">
+    <div class="dv-sidebar-header-title">Menu</div>
+    <button id="dvBtnExitLeftSidebar" class="dv-sidebar-close" aria-label="Close"><span class="dv-icon" style="width:18px;height:18px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span></button>
+  </div>
+  <div class="dv-sidebar-body">
+    <div class="dv-settings-block">
+      <div class="dv-toggle-row"><span>Dark Mode</span><button id="dvToggleDark" class="dv-switch"></button></div>
+    </div>
+    <button class="dv-sidebar-item" data-page="about-app"><span class="dv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></span>About this App</button>
+    <button class="dv-sidebar-item" data-tab-jump="Home"><span class="dv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></span>About the Man of God</button>
+    <button class="dv-sidebar-item" data-tab-jump="Mission"><span class="dv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6 6 1-4.5 4.5L17 20l-5-3-5 3 1.5-6.5L4 9l6-1z"></path></svg></span>Our Mission</button>
+    <button class="dv-sidebar-item" data-page="terms"><span class="dv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></span>Terms of Use &amp; Privacy Policy</button>
+    <button class="dv-sidebar-item" data-page="proprietary"><span class="dv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></span>Proprietary Software Notice</button>
+    <button class="dv-sidebar-item" id="dvBtnSidebarInstall"><span class="dv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></span>Install App</button>
+    <button class="dv-sidebar-item" id="dvBtnSidebarShare"><span class="dv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"></line><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"></line></svg></span>Share App</button>
+  </div>
+
+<!-- STICKY FOOTER CONTAINER (Buttons injected by external JS) -->
+  <div id="dvSidebarModularFooter" class="dv-mog-bottom-nav" style="position:absolute; bottom:0; width:100%;"></div>
+</div>
+</div>
+
+<!-- Right sidebar: gated, Man of God only -->
+<div id="dvRightBackdrop" class="dv-sidebar-backdrop dv-hidden"></div>
+<div id="dvRightSidebar" class="dv-sidebar dv-hidden">
+  <div class="dv-sidebar-header">
+    <button id="dvBtnExitRightSidebar" class="dv-sidebar-close" aria-label="Close"><span class="dv-icon" style="width:18px;height:18px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span></button>
+    <div style="display:flex;align-items:center;gap:10px;position:absolute;left:50%;transform:translateX(-50%);">
+      <div class="dv-sidebar-header-title" id="dvMogPanelTitle">Man of God</div>
+      <button id="dvBtnMogRefresh" class="dv-refresh-btn dv-hidden" aria-label="Refresh" style="width:34px;height:34px;position:static;background:rgba(255,255,255,0.15);color:#fff;display:none;"><span class="dv-icon" style="width:18px;height:18px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg></span></button>
+    </div>
+    <button id="dvBtnMogLogout" class="dv-sidebar-close dv-hidden" aria-label="Sign out"><span class="dv-icon" style="width:18px;height:18px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg></span></button>
+  </div>
+
+  <div id="dvMogSignIn" class="dv-mog-signin">
+    <p style="color:var(--dv-text-secondary);margin-bottom:20px;">This area is reserved for the Man of God.</p>
+    <div id="dvMogStepRequest">
+      <button id="dvBtnMogRequestCode" class="dv-appt-btn" style="width:auto;padding:0 28px;">Send me a code</button>
+    </div>
+    <div id="dvMogStepVerify" class="dv-hidden">
+      <input id="dvMogCodeInput" type="text" inputmode="numeric" maxlength="6" placeholder="6-digit code">
+      <br>
+      <button id="dvBtnMogVerifyCode" class="dv-appt-btn" style="width:auto;padding:0 28px;">Verify</button>
+    </div>
+  </div>
+
+  <div id="dvMogHome" class="dv-mog-home dv-hidden">
+    <div id="dvMogBody" class="dv-mog-body"></div>
+    <div class="dv-mog-bottom-nav">
+      <button class="dv-mog-nav-btn dv-active" data-mog-tab="Chat"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>Chat</button>
+      <button class="dv-mog-nav-btn" data-mog-tab="Request"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>Request</button>
+      <button class="dv-mog-nav-btn" data-mog-tab="Reply"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17H4v-2a4 4 0 0 1 4-4h1m5-6l4 4-4 4M13 7h5a2 2 0 0 1 2 2v8"></path></svg>Reply</button>
+      <button class="dv-mog-nav-btn" data-mog-tab="Ticker"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6 6 1-4.5 4.5L17 20l-5-3-5 3 1.5-6.5L4 9l6-1z"></path></svg>Ticker</button>
+    </div>
+  </div>
+</div>
+
+<!-- Full-page content overlay -->
+<div id="dvPageOverlay" class="dv-page-overlay dv-hidden">
+  <div class="dv-page-header">
+    <button id="dvBtnClosePage" type="button" class="dv-header-btn" aria-label="Close"><span class="dv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span></button>
+    <span id="dvPageTitle" class="dv-page-title">Info</span>
+  </div>
+  <div id="dvPageBody" class="dv-page-body"></div>
+</div>
+
+<!-- Screen-centered spinner overlay (form submit) -->
+<div id="dvSubmitOverlay" class="dv-fixed-overlay dv-hidden">
+  <div class="dv-overlay-spinner"></div>
+  <div id="dvSubmitOverlayText" class="dv-overlay-text">Submitting...</div>
+  <button id="dvBtnGoInboxFromOverlay" class="dv-appt-btn dv-hidden" style="width:auto;padding:0 24px;">Go to Inbox</button>
+</div>
+<div id="dvToastOverlay" class="dv-toast-overlay dv-hidden"><div id="dvToast" class="dv-toast"></div></div>
+
+<script src="app.js"></script>
+<script src="pagination.js"></script>
+<script src="background-ticker.js"></script>
+<script src="deeplinking.js"></script>
+<script src="mog-sync.js"></script>
+<script src="inbox-ticker.js"></script>
+<script src="android-shell.js"></script>
+<script src="notification-badge.js"></script> 
+<script src="documentation.js"></script>
+<script src="sidebar-footer.js"></script>
+</body>
+</html>
