@@ -1,9 +1,8 @@
-
 document.addEventListener("DOMContentLoaded", function() {
   
   // 1. App-specific config (replacing the old script's config)
   var CONFIG = {
-    whatsappNumber: "2340000000000", 
+    whatsappNumber: "2348086590253", 
     whatsappMessage: "Hello, I am contacting you regarding the Appointment Portal terms and resources."
   };
 
@@ -15,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
             '<p style="font-size:1rem; color:var(--dv-text-secondary); line-height:1.6; margin-bottom:24px;">Please read these terms carefully. By using this platform, you agree to the following guidelines.</p>' +
             
             '<h4 style="color:var(--dv-accent); font-size:1.15rem; font-weight:700; margin:0 0 10px 0;">Ownership & Fair Use</h4>' +
-            '<p style="font-size:1rem; color:var(--dv-text-secondary); line-height:1.6; margin-bottom:16px;">This Appointment Portal is created, owned, and operated by Rev. Chris Johnson, PhD. All content, design, and functionality are proprietary. You agree to use the App responsibly and not to engage in any activity that may disrupt its performance or compromise security.</p>' +
+            '<p style="font-size:1rem; color:var(--dv-text-secondary); line-height:1.6; margin-bottom:16px;">This Appointment Portal is created, owned, and operated by Rev. Don Victor, PhD. All content, design, and functionality are proprietary. You agree to use the App responsibly and not to engage in any activity that may disrupt its performance or compromise security.</p>' +
 
             '<div style="background-color:rgba(24,119,242,0.08); padding:18px; border-left:4px solid var(--dv-accent); margin-bottom:24px; border-radius:0 8px 8px 0;">' +
               '<strong style="display:block; margin-bottom:8px; color:var(--dv-accent-dark); font-size:1.05rem;">Proper Conduct:</strong>' +
@@ -83,5 +82,4 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     }
   });
-
 });
