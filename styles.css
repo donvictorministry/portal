@@ -126,7 +126,7 @@
     #dvProfilePhoto { position: relative; z-index: 1; }
     @keyframes dv-ring-spin { to { transform: rotate(360deg); } }
     #dvProfilePhoto { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; background: #dfe5ec; border: 3px solid #ffffff; display: block; }
-    .dv-hero-name { margin: 0 0 6px; color: #fff; font-size: 1.55rem; font-weight: 800; letter-spacing: -0.3px; line-height: 1.2; }
+    .dv-hero-name { margin: 0 0 6px; color: #fff; font-size: 1.3rem; font-weight: 800; letter-spacing: -0.3px; line-height: 1.2; }
     .dv-hero-role { margin: 0; font-weight: 700; color: #fff; font-size: 1rem; opacity: 0.95; }
     .dv-hero-body { padding: 26px 22px 24px; text-align: center; }
     .dv-hero-bio { margin: 0 auto 8px; max-width: 360px; font-size: 1rem; color: var(--dv-text-secondary); line-height: 1.6; }
