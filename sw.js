@@ -14,7 +14,8 @@ const CORE_ASSETS = [
   './notification-badge.js',
   './sidebar-footer.js',
  './documentation.js',
- './manifest.json'
+ './disclaimer.js',
+'./manifest.json'
 ];
 
 self.addEventListener('install', (event) => {
