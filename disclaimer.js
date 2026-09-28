@@ -9,26 +9,26 @@ document.addEventListener("DOMContentLoaded", function() {
   if (window.DV_PAGES) {
     window.DV_PAGES["terms"] = {
       title: "Terms of Use & Privacy",
-      html: '<h3 style="color:var(--dv-accent-dark); font-size:1.5rem; font-weight:900; margin-bottom:8px;">Terms of Use & Privacy Policy</h3>' +
+      html: '<h3 style="color:var(--dv-accent-dark); font-size:1.4rem; font-weight:900; margin-bottom:8px;">Terms of Use & Privacy Policy</h3>' +
             
-            '<p style="font-size:1.05rem; color:var(--dv-text-secondary); line-height:1.65; margin-bottom:24px;">' +
-              '<strong style="color:var(--dv-text);">1. Acceptance of Terms —</strong> By accessing or using this Appointment Portal, you acknowledge that you have read, understood, and agreed to these Terms of Use and Privacy Policy.' +
+            '<p style="font-size:1.1rem; color:var(--dv-text-secondary); line-height:1.65; margin-bottom:24px;">' +
+              '<strong style="color:var(--dv-text);">1. Acceptance of Terms —</strong>By accessing or using this Appointment Portal, you acknowledge that you have read, understood, and agreed to these Terms of Use and Privacy Policy.' +
             '</p>' +
 
-            '<h4 style="color:var(--dv-accent); font-size:1.15rem; font-weight:700; margin:0 0 12px 0;">Appointments & Expectations</h4>' +
-            '<ul style="font-size:1.05rem; color:var(--dv-text-secondary); line-height:1.7; padding-left:24px; margin-bottom:24px;">' +
-              '<li style="margin-bottom:12px;"><strong style="color:var(--dv-text);">2. Appointment Requests —</strong> Submitting a request does not constitute a confirmed appointment. Appointments are subject to availability, review, and confirmation.</li>' +
+            '<h4 style="color:var(--dv-accent); font-size:1.15rem; font-weight:700; margin:0 0 12px 0;"></h4>' +
+            '<ul style="font-size:1.1rem; color:var(--dv-text-secondary); line-height:1.7; padding-left:24px; margin-bottom:24px;">' +
+             '<li style="margin-bottom:12px;"><strong style="color:var(--dv-text);">2. Ownership —</strong>The portal is developed, created, owned, and operated by its developer, Rev. Don Victor, PhD. All content, design, and functionality are proprietary and protected by applicable intellectual property laws. You may not copy, modify, reproduce, decompile, or attempt to derive the portal’s underlying source code.</li>' +
               '<li style="margin-bottom:12px;"><strong style="color:var(--dv-text);">3. Online & Offline Appointments —</strong> The portal facilitates requests for both online and in-person appointments. Confirmed appointment details may vary according to the nature and circumstances of the appointment.</li>' +
-              '<li style="margin-bottom:12px;"><strong style="color:var(--dv-text);">11. No Guaranteed Outcome —</strong> Participation in an appointment, prayer, counseling, mentorship, prophetic consultation, or other ministry engagement does not guarantee any particular spiritual, personal, professional, financial, or other outcome.</li>' +
-              '<li style="margin-bottom:12px;"><strong style="color:var(--dv-text);">Age Restriction —</strong> By using this portal, you confirm that you are at least 18 years of age. If you are under 18, you confirm that you have obtained parental or guardian consent to use the App in accordance with the laws of your jurisdiction.</li>' +
+              '<li style="margin-bottom:12px;"><strong style="color:var(--dv-text);">4. Participation in an appointment, prayer, counseling, mentorship, prophetic consultation, academic advising, or any other engagement is offered in good faith and does not imply any financial benefit.</li>' +
+              '<li style="margin-bottom:12px;"><strong style="color:var(--dv-text);">5. Age Restriction —</strong> By using this portal, you confirm that you are at least 18 years of age. If you are under 18, you confirm that you have obtained parental or guardian consent to use the App in accordance with the laws of your jurisdiction.</li>' +
             '</ul>' +
 
             '<div style="background-color:rgba(24,119,242,0.08); padding:18px; border-left:4px solid var(--dv-accent); margin-bottom:24px; border-radius:0 8px 8px 0;">' +
-              '<strong style="display:block; margin-bottom:10px; color:var(--dv-accent-dark); font-size:1.05rem;">Conduct & Prohibited Use:</strong>' +
+              '<strong style="display:block; margin-bottom:10px; color:var(--dv-accent-dark); font-size:1.1rem;">Conduct & Prohibited Use:</strong>' +
               '<ul style="margin:0; padding-left:20px; color:var(--dv-text); font-size:1rem; line-height:1.6;">' +
-                '<li style="margin-bottom:8px;"><strong>4. Accurate Information —</strong> Users must provide accurate, complete, and truthful information. Providing false, misleading, or fraudulent information is prohibited.</li>' +
-                '<li style="margin-bottom:8px;"><strong>5. Respectful Conduct —</strong> Users must communicate respectfully and must not engage in harassment, threats, intimidation, abusive language, hate-based conduct, sexual misconduct, or any other inappropriate behavior.</li>' +
-                '<li><strong>6. Prohibited Use —</strong> The portal must not be used for unlawful activities, impersonation, fraud, solicitation of prohibited services, malicious activities, or any purpose that may harm another person or the ministry.</li>' +
+                '<li style="margin-bottom:8px;"><strong>6. Accurate Information —</strong>Users must provide accurate, complete, and truthful information. Providing false, misleading, or fraudulent information is prohibited.</li>' +
+                '<li style="margin-bottom:8px;"><strong>7. Respectful Conduct —</strong>Users must communicate respectfully and must not engage in harassment, threats, intimidation, abusive language, hate-based conduct, sexual misconduct, or any other inappropriate behavior.</li>' +
+                '<li style="margin-bottom:8px;"><strong>8. No Harmful Activities  —</strong>The portal must not be used for impersonation, fraud, malicious or any unlawful activities that may harm other users, the developer, or the ministry.</li>' +
               '</ul>' +
             '</div>' +
 
@@ -38,34 +38,33 @@ document.addEventListener("DOMContentLoaded", function() {
             '</a>' +
 
             '<!-- NATIVE SHOW MORE TOGGLE -->' +
-            '<button id="dvTermsShowMoreBtn" style="width:100%; min-height:54px; border-radius:27px; background:transparent; color:var(--dv-accent); border:2px solid var(--dv-accent); font-size:1.05rem; font-weight:800; cursor:pointer; margin-bottom:20px;">Read Complete Privacy Policy & More</button>' +
+            '<button id="dvTermsShowMoreBtn" style="width:100%; min-height:54px; border-radius:27px; background:transparent; color:var(--dv-accent); border:2px solid var(--dv-accent); font-size:1.1rem; font-weight:800; cursor:pointer; margin-bottom:20px;">Read More</button>' +
 
             '<div id="dvTermsHiddenContent" style="display:none;">' +
               '<hr style="border:none; border-top:1px solid var(--dv-border); margin:20px 0 24px 0;">' +
               
               '<h4 style="color:var(--dv-accent-dark); font-size:1.15rem; font-weight:800; margin:0 0 12px 0;">Privacy & Records</h4>' +
               '<ul style="font-size:1.05rem; color:var(--dv-text-secondary); line-height:1.7; padding-left:24px; margin-bottom:24px;">' +
-                '<li style="margin-bottom:12px;"><strong style="color:var(--dv-text);">7. Privacy & Confidentiality —</strong> Information submitted through the portal may include personal information and will be handled in accordance with applicable data-protection requirements. We do not store or transmit your log data to external servers. Limited technical information may be collected solely to maintain, analyze, and improve the App experience.</li>' +
-                '<li style="margin-bottom:12px;"><strong style="color:var(--dv-text);">9. Communication & Records —</strong> Communications and information submitted through the portal may be retained as reasonably necessary for appointment administration, security, dispute resolution, record-keeping, and compliance with applicable obligations.</li>' +
-                '<li style="margin-bottom:12px;"><strong style="color:var(--dv-text);">12. Third-Party Communication —</strong> Where an appointment involves external communication tools or services, their use may also be subject to the terms and privacy policies of those respective services.</li>' +
+                '<li style="margin-bottom:12px;"><strong style="color:var(--dv-text);">9. Privacy & Confidentiality —</strong>Information submitted through the portal may include personal information and will be handled with utmost confidentiality. Such information may be deleted from our database after processing. We do not store or transmit your data to external servers. Limited technical information may be collected solely for analytics and to maintain and improve the portal experience.</li>' +
+                '<li style="margin-bottom:12px;"><strong style="color:var(--dv-text);">10. Communication & Records —</strong>Communications and information submitted through the portal may be retained as reasonably necessary for appointment administration and record-keeping and will be protected through reasonable administrative, technical, and organizational measures.</li>' +
+                '<li style="margin-bottom:12px;"><strong style="color:var(--dv-text);">11. Third-Party Communication —</strong> Where an appointment involves external communication tools or services, their use may also be subject to the terms and privacy policies of those respective services.</li>' +
               '</ul>' +
 
-              '<h4 style="color:var(--dv-accent-dark); font-size:1.15rem; font-weight:800; margin:0 0 12px 0;">Security, Access & Ownership</h4>' +
-              '<ul style="font-size:1.05rem; color:var(--dv-text-secondary); line-height:1.7; padding-left:24px; margin-bottom:24px;">' +
-                '<li style="margin-bottom:12px;"><strong style="color:var(--dv-text);">Ownership —</strong> The portal is created, owned, and operated by its developer, Rev. Don Victor, PhD. All content, design, and functionality are proprietary and protected by intellectual property laws. You may not copy, modify, reproduce, decompile, or attempt to derive the App\'s underlying source code.</li>' +
-                '<li style="margin-bottom:12px;"><strong style="color:var(--dv-text);">8. No Unauthorized Access —</strong> Users must not attempt to gain unauthorized access to the portal, its systems, administrative areas, appointment records, or another user\'s information.</li>' +
-                '<li style="margin-bottom:12px;"><strong style="color:var(--dv-text);">13. Security & Misuse Reporting —</strong> Suspected security breaches, impersonation, abuse, or misuse of the portal may be investigated and, where appropriate, reported to relevant authorities.</li>' +
-                '<li style="margin-bottom:12px;"><strong style="color:var(--dv-text);">10. Right to Restrict Access —</strong> We reserve the right, where reasonably necessary and subject to applicable law, to decline, cancel, suspend, restrict, or terminate appointment requests or access to the portal where there is evidence of abuse, misconduct, misuse, security concerns, or violation of these terms.</li>' +
+              '<h4 style="color:var(--dv-accent-dark); font-size:1.15rem; font-weight:800; margin:0 0 12px 0;">Security, Access</h4>' +
+              '<ul style="font-size:1.1rem; color:var(--dv-text-secondary); line-height:1.7; padding-left:24px; margin-bottom:24px;">' +
+                '<li style="margin-bottom:12px;"><strong style="color:var(--dv-text);">12. No Unauthorized Access —</strong>Users must not attempt to gain unauthorized access to the portal, its systems, administrative console, appointment records, or another user’s information.</li>' +
+                '<li style="margin-bottom:12px;"><strong style="color:var(--dv-text);">13. Security & Misuse Reporting —</strong>Suspected security breaches, impersonation, abuse, or misuse of the portal may be investigated and, where appropriate, reported to the relevant authorities.</li>' +
+                '<li style="margin-bottom:12px;"><strong style="color:var(--dv-text);">14. Right to Restrict Access —</strong>We reserve the right, where reasonably necessary and subject to operational requirements, to decline, cancel, suspend, restrict, or terminate appointment requests or access to the portal where there is evidence of impersonation, abuse, misconduct, misuse, security concerns, or violation of these terms, without notice.</li>' +
               '</ul>' +
 
               '<div style="background-color:rgba(24,119,242,0.08); padding:18px; border-left:4px solid var(--dv-accent); margin-bottom:24px; border-radius:0 8px 8px 0;">' +
-                '<strong style="display:block; margin-bottom:8px; color:var(--dv-accent-dark); font-size:1.05rem;">Warranties & Liability:</strong>' +
-                '<span style="color:var(--dv-text); font-size:1rem; line-height:1.6;">The App is provided "as is" and "as available," without any warranties of any kind, express or implied. To the fullest extent permitted by law, the Developer is not liable for any direct or indirect consequences resulting from the use of the App.</span>' +
+                '<strong style="display:block; margin-bottom:8px; color:var(--dv-accent-dark); font-size:1.1rem;">15. Warranties & Liability:</strong>' +
+                '<span style="color:var(--dv-text); font-size:1rem; line-height:1.6;">The portal is provided “as is” and “as available,” without warranties of any kind, express or implied. To the fullest extent permitted by law, Rev. Don Victor, PhD is not liable for any direct or indirect consequences arising from the use of the portal.</span>' +
               '</div>' +
 
               '<h4 style="color:var(--dv-accent-dark); font-size:1.15rem; font-weight:800; margin:0 0 12px 0;">Governing Law & Updates</h4>' +
-              '<p style="font-size:1.05rem; color:var(--dv-text-secondary); line-height:1.65; margin-bottom:12px;"><strong style="color:var(--dv-text);">14. Changes to These Terms —</strong> These Terms of Use and Privacy Policy may be updated periodically to reflect changes in the portal, ministry operations, technology, or applicable requirements. The platform operates under divine inspiration and aims to serve globally.</p>' +
-              '<p style="font-size:1.05rem; color:var(--dv-text-secondary); line-height:1.65; margin-bottom:24px;"><strong style="color:var(--dv-text);">15. Governing Law —</strong> These terms are subject to applicable laws and regulations governing the operation and use of the Appointment Portal. Any disputes arising from these Terms or your use of the App shall be resolved in the courts of Nigeria, specifically those of Akwa Ibom State.</p>' +
+              '<p style="font-size:1.05rem; color:var(--dv-text-secondary); line-height:1.65; margin-bottom:12px;"><strong style="color:var(--dv-text);">16. Changes to These Terms —</strong>These Terms of Use and Privacy Policy may be updated periodically to reflect changes in the portal, ministry operations, technology, or applicable requirements. Updates will be communicated through the portal and our official social media channels. Chris Ministries operates under divine inspiration and aims to serve globally.</p>' +
+              '<p style="font-size:1.05rem; color:var(--dv-text-secondary); line-height:1.65; margin-bottom:24px;"><strong style="color:var(--dv-text);">17. Governing Law —</strong>These Terms are subject to applicable laws and our internal regulations governing the operation and use of the Appointment Portal. Any disputes arising from these Terms or your use of the portal shall be resolved by the courts of Nigeria, specifically the courts of Akwa Ibom State. The developer reserves the right to pursue appropriate legal remedies against any individual or entity involved in unauthorized access, reverse engineering, cloning, theft, security breaches, or other unlawful interference with the portal, in accordance with applicable laws.</p>' +
             '</div>'
     };
   }
@@ -99,5 +98,4 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     }
   });
-
 });
